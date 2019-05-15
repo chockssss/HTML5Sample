@@ -1,0 +1,35 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <h1>Geo Location</h1>
+        <button id="btnGetLocation" onclick="getCurrentLocation()">Get My Location</button>
+
+        <script>
+
+            var getCurrentLocation = function(){
+                navigator.geolocation.getCurrentPosition(SuccessFunction)
+            }
+
+            var update = navigator.geolocation.watchPosition(UpdatedFunction)
+
+            var SuccessFunction = function(location){
+                console.log(location)
+                var lat = location.coords.latitude
+                var lon = location.coords.longitude
+                console.log("Latitude: " + lat)
+                console.log("Longitude: " + lon)
+            }
+
+            var UpdatedFunction = function(location){
+                console.log(location)
+                var lat = location.coords.latitude
+                var lon = location.coords.longitude
+                console.log("Latitude: " + lat)
+                console.log("Longitude: " + lon)
+            }
+
+        </script>
+    </body>
+</html>

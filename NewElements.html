@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body onload="GetMinValue()">
+        <h1>New Elements in HTML5</h1>
+        <form>
+            <fieldset>
+                <legend>Personal Information</legend>
+                <div>
+                    <label>Name: </label>
+                    <input type="text" autofocus required pattern="[A-Za-z\s]{0,20}">
+                </div>
+                <br>
+                <div>
+                    <label>DOB: </label>
+                    <input id="DOB" type="date" max="2019-05-08" >
+                </div>
+                <br>
+                <div>
+                    <label>POB: </label>
+                    <input type="text" list="cityNames">
+                        <datalist id="cityNames">
+                            <option value="CHN" selected>Chennai</option>
+                            <option value="KKDI">Karaikudi</option>
+                            <option value="MDI">Madurai</option>
+                        </datalist>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Professional Information</legend>
+                <div>
+                    <label>Email: </label>
+                    <input type="email" >
+                </div>
+                <br>
+                <div>
+                    <label>Experience: </label>
+                    <input type="number" step="2">
+                </div>
+                <br>
+                <div>
+                    <label>Website: </label>
+                    <input type="url" >
+                </div>
+                <br>
+                <div>
+                    <label>How was the session: </label>
+                    <input type="range" min="0" max="10" list="ranges">
+                        <datalist id="ranges">
+                            <option value="0">0</option>
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                        </datalist>
+                </div>
+            </fieldset>
+            <br>
+            <button type="submit">Submit Form</button>
+        </form>
+
+        <script>
+
+            var GetMinValue = function(){
+                var dateISOFormat = new Date().toISOString()
+                console.log(dateISOFormat)
+                var dateToBind = dateISOFormat.split("T")[0]
+                console.log(dateToBind)
+                document.getElementById("DOB").min = dateToBind
+            }
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <title>Welcome to Local Storage Tutorial</title>
+</head>
+
+<body onload="InitializeValues()">
+    <h1>Local Storage Example</h1>
+    <Button id="btnIncrementCounter" onclick="IncrementCounter()">Increment Counter</Button>
+    <br>
+    
+    <label id="lblShowIncrementalNumber">Click the button increment the value</label>
+
+    <script>
+
+        var intCounter = 0
+        var ShowIncrementalNumber = document.getElementById("lblShowIncrementalNumber")
+
+        var IncrementCounter = function () {
+            intCounter = ++intCounter
+            localStorage.setItem("counter", intCounter)
+            ShowIncrementalNumber.innerHTML =  intCounter 
+        }
+
+        var InitializeValues = function () {
+            if (localStorage) {
+                if (localStorage.counter == null) {
+                    localStorage.setItem("counter", 0)
+                }
+                else {
+                    intCounter = localStorage.getItem("counter") 
+                    ShowIncrementalNumber.innerHTML =  intCounter    
+                }
+                
+            }
+        }    
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<head>
+
+    <style>
+        div.gallery {
+            margin: 5px;
+            border: 1px solid #ccc;
+            float: left;
+            width: 180px;
+        }
+
+        div.gallery:hover {
+            border: 1px solid #777;
+        }
+
+        div.gallery img {
+            width: 100%;
+            height: auto;
+            }
+
+        div.desc {
+            padding: 15px;
+            text-align: center;
+        }
+
+        div.desc:hover {
+            color: green;
+            padding: 15px;
+            text-align: center;
+        }
+
+        header{
+            background-image: url("images/1024px-Chuurei-tou_Fujiyoshida_17025277650_c59733d6ba_o.jpg");
+            height: 100vh;
+            background-size: cover;
+        }
+
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .logo{
+            width: 75px;
+            height: 75px;
+            padding: 05px;
+            padding-left: 50px;
+        }
+
+        .menuHeader{
+            width: 100%;
+            background-color: white;
+        }
+
+        .menuallign{
+            padding: 20px;
+            float: right;
+        }
+
+        .menu{
+            list-style: none;
+        }
+
+        .menuItems{
+            display: inline;
+            color:darkgray;
+            border-width: 1px;
+            border: hidden;
+            padding: 10px;
+            margin: 10px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 15px;
+        }
+
+        .menuItems:hover{
+           border-style: hidden;
+           border-bottom: solid;
+           transition: all 0.3s ease-in-out;
+           
+        }
+
+        .menulastitem{            
+            border-width: 1px;
+            border-right: hidden;
+        }
+
+        .ContentHeader{
+            vertical-align: middle;
+            margin-left: 10%;
+            margin-top: 10%
+        }
+
+        .lblWhite{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 20px;
+            color: aliceblue;
+        }
+
+        .btnBlue{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: navy;
+            border-style: none;
+            color: whitesmoke;
+            padding: 5px;
+            padding-right: 10px;
+            padding-left: 10px;
+            margin: 5px;
+        }   
+
+        .btnBlueRounded{
+            border-radius: 5px;
+        }   
+
+        .btnBlue:hover{
+            border: 10px;
+            border-color: whitesmoke;
+        }
+
+        .vdoBackground{
+            position: fixed;
+            min-height: 100%;
+            min-width: 100%;
+            height: auto;
+            width: auto;
+            z-index: -100;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+           <video id="vdoBackground" class="vdoBackground" autoplay loop>
+                    <source src="/video/small.mp4">
+                </video>
+        <div class="menuHeader">
+            <img class="logo" src="images/800px-Tourism_Australia_logo.svg.png">
+            <div class="menuallign">
+                <ul class="menu">
+                    <li class="menuItems">Home</li>
+                    <li class="menuItems">About Us</li>
+                    <li class="menuItems">Careers</li>
+                    <li class="menuItems menulastitem">Contact</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="ContentHeader">
+            <label id="lblWelcome" class="lblWhite">Welcome to Tourism in Australia!!! Register and sign in to book your adventurous trip.</label>
+            <br>
+            <button class="btnBlue btnBlueRounded">Register</button>
+            <button class="btnBlue btnBlueRounded">Login</button>
+        </div>
+        
+    </header>
+    <div class="gallery">
+        <a target="_blank" href="/images/img_5terre.jpg">
+            <img src="/images/img_5terre.jpg" height="50px" width="50px">
+        </a>
+        <div class="desc">Add a description of the image here</div>
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="/images/img_forest.jpg">
+            <img src="/images/img_forest.jpg" height="50px" width="50px">
+        </a>
+        <div class="desc">Add a description of the image here</div>
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="/images/img_lights.jpg">
+            <img src="/images/img_lights.jpg" height="50px" width="50px">
+        </a>
+        <div class="desc">Add a description of the image here</div>
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="/images/img_mountains.jpg">
+            <img src="/images/img_mountains.jpg" height="50px" width="50px">
+        </a>
+        <div class="desc">Add a description of the image here</div>
+    </div>
+</body>

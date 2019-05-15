@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <title>Welcome!!</title>
+    
+    <style>
+        .btn-border{
+            border-radius: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to HTML5 Tutorial</h1>
+    <div>
+        <h2>Video Tutorial</h2>
+        <h3>Downloaded Video File</h3>
+        <video width="560" height="315" id="MyVideo" controls loop muted autoplay>
+            <source src="SampleVideo_720x480_5mb.mp4" type="video/mp4" title="My Video">
+        </video>
+        <br>
+        <button id="btnPlay" class="btn-border" onclick="PlayMyVideo()" disabled>Play</button>
+        <button id="btnPause" class="btn-border" onclick="PauseMyVideo()">Pause</button>
+
+        <h3>Youtube Direct Link</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/3OkwCLakC_4" frameborder="0"></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/93iK4wNij8E" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        <script>
+            var MyVideoDocument = document.getElementById("MyVideo")
+            var btnPlayRef = document.getElementById("btnPlay")
+            var btnPauseRef = document.getElementById("btnPause")
+
+            var PlayMyVideo = function () {
+                MyVideoDocument.play()
+                btnPlayRef.disabled = true
+                btnPauseRef.disabled = false
+            }
+
+            var PauseMyVideo = function () {
+                MyVideoDocument.pause()
+                btnPlayRef.disabled = false
+                btnPauseRef.disabled = true
+            }
+        </script>
+    </div>
+</body>
+
+</html>
